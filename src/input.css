@@ -1,0 +1,129 @@
+@import "tailwindcss";
+
+@theme {
+  /* Palet editorial — flat, tanpa gradient */
+  --color-ink: #101014;
+  --color-ink-soft: #1c1c22;
+  --color-paper: #f6f5f1;
+  --color-paper-soft: #efede6;
+  --color-dim: #6b6a63;
+  --color-dim-dark: #a3a29a;
+  --color-line: #e4e1d8;
+  --color-line-dark: #2a2a31;
+  --color-accent: #0f766e;
+  --color-accent-ink: #0b5a54;
+  --color-wa: #1d9e57;
+
+  --font-sans: "Space Grotesk", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+}
+
+/* Dark theme: token di-invert via CSS variables di level :root */
+:root {
+  --bg: var(--color-paper);
+  --bg-soft: var(--color-paper-soft);
+  --fg: var(--color-ink);
+  --fg-dim: var(--color-dim);
+  --line-c: var(--color-line);
+  --accent-c: var(--color-accent);
+  --card-c: #ffffff;
+}
+
+html.dark {
+  --bg: var(--color-ink);
+  --bg-soft: var(--color-ink-soft);
+  --fg: var(--color-paper);
+  --fg-dim: var(--color-dim-dark);
+  --line-c: var(--color-line-dark);
+  --accent-c: #2dd4bf;
+  --card-c: #17171d;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-sans);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--accent-c);
+  color: #fff;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent-c);
+  outline-offset: 3px;
+}
+
+/* Garis bawah link navigasi */
+.nav-underline {
+  position: relative;
+}
+.nav-underline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  height: 1.5px;
+  width: 0;
+  background: var(--accent-c);
+  transition: width 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.nav-underline:hover::after,
+.nav-underline[aria-current="true"]::after {
+  width: 100%;
+}
+
+/* Transisi reveal on-scroll */
+.reveal {
+  opacity: 0;
+  transform: translateY(22px);
+  transition:
+    opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* Ganti bahasa: fade halus */
+.lang-swap {
+  transition: opacity 0.18s ease;
+}
+.lang-swap.switching {
+  opacity: 0;
+}
+
+/* Ikon tema toggle: cross-fade */
+.theme-icon {
+  transition:
+    transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+    opacity 0.2s ease;
+}
+html.dark .icon-sun { display: block; }
+html.dark .icon-moon { display: none; }
+html:not(.dark) .icon-sun { display: none; }
+html:not(.dark) .icon-moon { display: block; }
+
+/* Print: unduh CV yang bersih */
+@media print {
+  .no-print { display: none !important; }
+  body { background: #fff !important; color: #111 !important; }
+  .print-block { display: block !important; }
+  section { padding-top: 1.5rem !important; padding-bottom: 1.5rem !important; }
+  a { color: #111 !important; text-decoration: none; }
+}

@@ -1,0 +1,16 @@
+{
+  "name": "fauzan-portfolio",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Portfolio Muhammad Fauzan Raffa Al-Habsy — Tailwind CSS v4 build",
+  "scripts": {
+    "build:css": "tailwindcss -i src/input.css -o assets/css/main.css --minify",
+    "watch:css": "tailwindcss -i src/input.css -o assets/css/main.css --watch",
+    "build:icons": "node tools/generate-icons.mjs",
+    "build": "npm run build:icons && npm run build:css"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.1.13",
+    "tailwindcss": "^4.1.13"
+  }
+}
