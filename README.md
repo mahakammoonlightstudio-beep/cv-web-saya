@@ -55,4 +55,4 @@ Situs ini sepenuhnya statis dan dapat di-hosting di mana saja:
 
 ## Lisensi
 
-Hak cipta 2026 Muhammad Fauzan Raffa Al-Habsy.
+Didistribusikan di bawah [Creative Commons Attribution 4.0 International (CC BY 4.0)](LICENSE). Bebas digunakan dan dimodifikasi selama mencantumkan kredit kepada Muhammad Fauzan Raffa Al-Habsy.
