@@ -2,11 +2,15 @@
  * Portfolio Service Worker
  * Network-first dengan cache fallback (konten selalu segar, tetap bisa offline).
  */
-const CACHE_NAME = "fauzan-portfolio-v1";
+const CACHE_NAME = "fauzan-portfolio-v3";
 const CORE_ASSETS = [
   "./",
   "./index.html",
   "./assets/css/main.css",
+  "./assets/css/app.css",
+  "./assets/js/app.js",
+  "./assets/vendor/bootstrap.min.css",
+  "./assets/vendor/bootstrap.bundle.min.js",
   "./assets/icons/favicon.svg",
   "./assets/icons/icon-192.png",
   "./assets/icons/icon-512.png",
