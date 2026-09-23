@@ -1,0 +1,16 @@
+Remake visual terbesar untuk situs portofolio pribadi saya - sekarang versi 3.
+
+Yang baru:
+
+- Fondasi komponen Bootstrap 5.3, di-host sendiri sehingga tanpa dependensi CDN
+- Hero 3D interaktif yang ditulis murni dengan canvas API (tanpa Three.js): lapisan geometri paralaks yang bereaksi terhadap kursor dan gerakan perangkat
+- Transisi tema terang-gelap yang halus: gradasi latar dianimasikan langsung, ditambah cross-fade berbasis View Transitions API dengan fallback yang anggun
+- Scroll-reveal, tilt 3D pada kartu proyek, ripple tombol, lightbox galeri, progress baca, dan tombol back-to-top
+- PWA penuh dan dwibahasa Indonesia-Inggris
+
+Semua animasi menghormati prefers-reduced-motion - aksesibilitas bukan bonus, itu bagian dari desain.
+
+Lihat langsung: https://fauzan-raffa.page.gd/
+Kode: https://github.com/mahakammoonlightstudio-beep/cv-web-saya
+
+#WebDevelopment #Portfolio #Bootstrap #Canvas3D #Frontend

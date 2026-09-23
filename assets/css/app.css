@@ -4,6 +4,11 @@
    + fallback cross-fade), scroll-reveal, 3D hero, tilt.
    ============================================================ */
 
+/* ---------- Audit mobile: target sentuh minimal 44px pada link kartu ---------- */
+.d-flex.gap-3 > a {
+  padding-block: 10px;
+}
+
 /* ---------- Design tokens ---------- */
 :root {
   --paper: #f7f6f2;
