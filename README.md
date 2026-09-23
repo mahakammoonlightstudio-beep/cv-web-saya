@@ -1,58 +1,58 @@
-# Portfolio — Muhammad Fauzan Raffa Al-Habsy
+# Portfolio - Muhammad Fauzan Raffa Al-Habsy
 
-> Situs portofolio pribadi — Web Developer. Dibangun dengan **Tailwind CSS v4**, statis, dwibahasa (ID/EN), dan PWA-ready.
+Situs portofolio pribadi untuk Muhammad Fauzan Raffa Al-Habsy, web developer dari SMKN 1 Tenggarong. Dibangun dengan Tailwind CSS v4, sepenuhnya statis, dwibahasa Indonesia/Inggris, dan siap dipasang sebagai PWA.
 
-## ✨ Fitur
+**Live: <https://fauzan-raffa.page.gd/>**
 
-- **Dwibahasa ID / EN** — teks ditandai atribut `data-id` / `data-en` dan ditukar tanpa reload.
-- **Section lengkap** — Proyek Terpilih, Keahlian, Perjalanan, dan CTA kolaborasi.
-- **PWA** — installable & offline-ready (`manifest.webmanifest` + `sw.js`, ikon dari generator).
-- **Statis & cepat** — tanpa framework JS; satu file CSS hasil build Tailwind yang sudah di-minify.
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-v4-38bdf8) ![PWA](https://img.shields.io/badge/PWA-ready-5a0fc8)
 
-## 🛠️ Teknologi
+## Fitur
 
-- HTML5 + Tailwind CSS v4 (`@tailwindcss/cli`)
-- Vanilla JavaScript
-- Service Worker + Web App Manifest (PWA)
+- **Dwibahasa Indonesia / Inggris** - teks ditandai atribut `data-id` / `data-en` dan ditukar tanpa reload.
+- **Bagian lengkap** - proyek terpilih, keahlian, perjalanan, dan ajakan kolaborasi.
+- **PWA** - dapat dipasang dan berfungsi offline melalui manifest dan service worker.
+- **Statis dan cepat** - tanpa framework JavaScript; satu berkas CSS hasil build Tailwind yang sudah di-minify.
 
-## 🚀 Development
+## Persyaratan
 
-Butuh [Node.js](https://nodejs.org/).
+- Node.js 18 atau lebih baru (hanya untuk development)
+
+## Development
 
 ```bash
-# Install dependensi
+# Pasang dependensi
 npm install
 
-# Mode watch — CSS di-rebuild otomatis saat src/input.css berubah
+# Mode watch - CSS dibangun ulang otomatis saat src/input.css berubah
 npm run watch:css
 
-# Build produksi — generate ikon + minify CSS
+# Build produksi - generate ikon dan minify CSS
 npm run build
 ```
 
-Hasil build ditulis ke `assets/css/main.css` (sudah di-commit, jadi situs bisa dibuka langsung tanpa build ulang).
+Hasil build ditulis ke `assets/css/main.css` dan ikut di-commit, sehingga situs dapat dibuka langsung tanpa membangun ulang.
 
-## 📁 Struktur
+## Struktur Proyek
 
 ```
 CV web saya/
-├── index.html              # Halaman utama (single page)
-├── src/input.css           # Sumber Tailwind CSS
-├── assets/css/main.css     # Hasil build (committed)
-├── tools/generate-icons.mjs# Generator ikon PWA
-├── manifest.webmanifest    # Manifest PWA
-├── sw.js                   # Service worker
+├── index.html               # Halaman utama (single page)
+├── src/input.css            # Sumber Tailwind CSS
+├── assets/css/main.css      # Hasil build (di-commit)
+├── tools/generate-icons.mjs # Generator ikon PWA
+├── manifest.webmanifest     # Manifest PWA
+├── sw.js                    # Service worker
 └── package.json
 ```
 
-## ☁️ Deploy
+## Deploy
 
-Situs ini 100% statis — bisa di-hosting di mana saja:
+Situs ini sepenuhnya statis dan dapat di-hosting di mana saja:
 
-- **GitHub Pages**: Settings → Pages → pilih branch `main`.
-- **Netlify / Vercel**: drag & drop folder, tanpa build command.
-- **Shared hosting**: upload semua file ke `public_html/`.
+- **GitHub Pages**: Settings, Pages, pilih branch `main`.
+- **Netlify / Vercel**: unggah folder tanpa build command.
+- **Shared hosting**: salin seluruh berkas ke `public_html/`.
 
----
+## Lisensi
 
-Hak cipta © 2026 Muhammad Fauzan Raffa Al-Habsy · mahakammoonlightstudio@gmail.com
+Hak cipta 2026 Muhammad Fauzan Raffa Al-Habsy.
