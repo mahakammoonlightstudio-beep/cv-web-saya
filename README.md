@@ -4,7 +4,7 @@ Situs portofolio pribadi untuk Muhammad Fauzan Raffa Al-Habsy, web developer dar
 
 **Live: <https://fauzan-raffa.page.gd/>**
 
-![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-v4-38bdf8) ![PWA](https://img.shields.io/badge/PWA-ready-5a0fc8)
+![License](https://img.shields.io/badge/License-CC%20BY%204.0-blue) ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-v4-38bdf8) ![PWA](https://img.shields.io/badge/PWA-ready-5a0fc8)
 
 ## Fitur
 
